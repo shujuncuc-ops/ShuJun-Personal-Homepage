@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>项目详情｜基于 Coze 智能体的内容平台自动化运营 Agent 设计与验证</title>
+  <meta name="description" content="陈姝君项目详情页：基于 Coze 智能体的内容平台自动化运营 Agent 设计与验证。">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --ink: #111827;
+      --muted: #6b7280;
+      --rule: #e5e7eb;
+      --accent: #2563eb;
+      --max: 980px;
+      --radius: 16px;
+      --font: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 28px 18px 56px;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    img { max-width: 100%; display: block; }
+    .page { max-width: var(--max); margin: 0 auto; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+    .hero {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      line-height: 1.25;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 14px;
+    }
+    .summary {
+      max-width: 72ch;
+      font-size: 1rem;
+    }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .chip {
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      background: #fff;
+    }
+    .section { margin-top: 34px; }
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 1.3rem;
+      line-height: 1.35;
+    }
+    .section p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .note {
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      background: var(--bg-soft);
+    }
+    .note strong { color: var(--ink); }
+    .figure {
+      margin-top: 18px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+    }
+    .figure a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    .figure img {
+      width: 100%;
+      height: auto;
+      background: var(--bg-soft);
+    }
+    .caption {
+      padding: 12px 14px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.92rem;
+      color: var(--muted);
+      background: #fff;
+    }
+    @media (max-width: 760px) {
+      body { padding: 20px 14px 42px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="./index.html#about">← 返回个人主页</a>
+
+    <header class="hero">
+      <h1>基于 Coze 智能体的内容平台自动化运营 Agent 设计与验证</h1>
+      <div class="meta">
+        <span>中国传媒大学本科毕业论文</span>
+        <span>·</span>
+        <span>AI Agent / 内容运营 / 数据分析</span>
+        <span>·</span>
+        <span>26 天 84 万+ 曝光，单篇最高曝光 51.7 万</span>
+      </div>
+      <p class="summary">这个项目从真实社交内容平台的运营目标出发，尝试回答一个很具体的问题：在平台算法真实运作的环境中，全自动 AI 智能体究竟能不能持续生产内容、获得流量，并形成可解释的账号增长机制。我的工作重点是搭建完整运营闭环、设计策略优化流程，以及把运行数据沉淀成可分析的结构化记录。</p>
+      <div class="chip-row">
+        <span class="chip">Coze</span>
+        <span class="chip">内容平台研究</span>
+        <span class="chip">AI Agent</span>
+        <span class="chip">数据反馈闭环</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>项目解决什么问题</h2>
+      <p>项目关注的是“AI 能否在真实平台环境中承担内容运营角色”这个问题。除了看最终曝光量，我也关心账号增长的波动、内容结构、用户互动以及高表现内容的形成机制，因此整个系统不是单纯生成内容，而是把选题、生成、发布、记录和复盘串成闭环。</p>
+      <div class="figure">
+        <a href="./assets/agent/agent-overview.png" target="_blank" rel="noopener">
+          <img src="./assets/agent/agent-overview.png" alt="项目概览">
+        </a>
+        <div class="caption">项目概览：研究问题、账号表现维度与账号增长机制分析框架。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>系统架构</h2>
+      <p>整体设计分成三部分：热点选题获取、自动内容生成、账号运营优化。前端是小红书账号，底层通过 Coze 工作流和数据记录表协同运行，让每一轮输出都能回流到下一轮策略迭代中。</p>
+      <div class="figure">
+        <a href="./assets/agent/agent-architecture.png" target="_blank" rel="noopener">
+          <img src="./assets/agent/agent-architecture.png" alt="系统架构设计">
+        </a>
+        <div class="caption">系统架构设计：从热点获取、内容生成到账号优化的完整自动化闭环。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>我具体做了什么</h2>
+      <div class="grid">
+        <div class="note">
+          <strong>工作流设计</strong><br>
+          搭建热点信息获取、帖文生成与反馈优化三条核心工作流，并定义工作流之间的数据传递方式。
+        </div>
+        <div class="note">
+          <strong>数据沉淀</strong><br>
+          把选题数据、运营数据和内容表现统一写入飞书表格，形成后续分析与复盘的底层数据资产。
+        </div>
+        <div class="note">
+          <strong>人设与账号定位</strong><br>
+          通过人机协同明确内容赛道、目标用户、表达风格和情绪标签，确保生成内容有连续性而不是随机输出。
+        </div>
+        <div class="note">
+          <strong>案例分析</strong><br>
+          对高曝光爆款笔记做单独拆解，观察哪些主题、形式和表达方式更容易带来增长。
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>热点获取与内容生成</h2>
+      <p>第一条工作流负责从热点信息中筛选合适话题，并将其转化为结构化选题，再进一步生成可发布内容。这一步的重点不是“多写”，而是让话题来源、生成规则和最终输出都可追溯。</p>
+      <div class="figure">
+        <a href="./assets/agent/agent-content-workflow.png" target="_blank" rel="noopener">
+          <img src="./assets/agent/agent-content-workflow.png" alt="热点获取与帖文生成工作流">
+        </a>
+        <div class="caption">热点信息获取与帖文生成工作流：从搜索、筛选到生成与发布。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>反馈与策略优化</h2>
+      <p>第二条工作流基于历史笔记表现做内容复盘。通过筛选高表现内容、结合时间与季节信息扩展关键词资源，系统能够逐步形成持续更新的选题参考库，而不是每一轮都从零开始。</p>
+      <div class="figure">
+        <a href="./assets/agent/agent-feedback-workflow.png" target="_blank" rel="noopener">
+          <img src="./assets/agent/agent-feedback-workflow.png" alt="运营反馈与策略优化工作流">
+        </a>
+        <div class="caption">运营反馈与策略优化工作流：从历史表现出发优化后续选题和内容策略。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>数据记录与分析基础</h2>
+      <p>为了让项目能够做研究和复盘，我把“选题相关数据”和“运营相关数据”分别记录在飞书中。这样不仅能追溯每一篇内容的来源和生成逻辑，也方便后续做描述统计、增长分析和爆款案例拆解。</p>
+      <div class="figure">
+        <a href="./assets/agent/agent-data-record.png" target="_blank" rel="noopener">
+          <img src="./assets/agent/agent-data-record.png" alt="飞书数据记录">
+        </a>
+        <div class="caption">飞书数据记录：选题数据与运营数据分表沉淀，支撑后续分析。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>账号定位与人设</h2>
+      <p>项目初期专门做了账号定位与人设设计，明确目标用户、内容风格和情感标签，并多轮迭代生成 IP 形象。这一步帮助整个账号在连续发布中保持统一感，也让内容输出更符合平台语境。</p>
+      <div class="figure">
+        <a href="./assets/agent/agent-persona.png" target="_blank" rel="noopener">
+          <img src="./assets/agent/agent-persona.png" alt="账号定位与人设">
+        </a>
+        <div class="caption">账号定位与人设：从赛道选择到 IP 形象定稿，建立稳定的账号表达方式。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>爆款案例分析</h2>
+      <p>为了验证“内容表现分化”和“爆款驱动增长”的判断，我从 38 篇样本笔记中选取曝光排名前三的内容做深度分析。这个部分帮助我更具体地理解什么样的选题、画面和表达方式能推动账号增长。</p>
+      <div class="figure">
+        <a href="./assets/agent/agent-viral-cases.png" target="_blank" rel="noopener">
+          <img src="./assets/agent/agent-viral-cases.png" alt="爆款案例分析">
+        </a>
+        <div class="caption">爆款案例分析：账号主页与高曝光内容示例，用于理解增长驱动因素。</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

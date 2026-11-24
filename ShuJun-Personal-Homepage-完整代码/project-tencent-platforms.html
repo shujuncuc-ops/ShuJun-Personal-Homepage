@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>腾讯 PCG 内容服务平台产品实践 · 陈姝君</title>
+  <style>
+    :root { --ink:#111827; --muted:#64748b; --line:#e2e8f0; --blue:#2563eb; --soft:#f8fbff; --max:1080px; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:ui-sans-serif,system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#fff; color:var(--ink); line-height:1.7; }
+    a { color:inherit; }
+    .wrap { max-width:var(--max); margin:0 auto; padding:36px 24px 72px; }
+    .back { color:var(--muted); font-size:.95rem; text-decoration:none; }
+    .back:hover, .demo-open:hover { color:var(--blue); }
+    header { margin:34px 0 38px; }
+    .eyebrow { margin:0 0 10px; color:var(--blue); font-size:.82rem; font-weight:750; letter-spacing:.12em; }
+    h1 { margin:0; font-size:clamp(2rem,5vw,3.2rem); line-height:1.18; letter-spacing:-.04em; }
+    .intro { max-width:760px; margin:16px 0 0; color:var(--muted); font-size:1.04rem; }
+    .platforms { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:30px 0 16px; }
+    .platform { min-height:150px; padding:20px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+    .platform.active { border-color:#93c5fd; background:linear-gradient(135deg,#eff6ff,#fff); }
+    .platform .label { margin:0; color:var(--muted); font-size:.78rem; font-weight:750; letter-spacing:.08em; }
+    .platform h2 { margin:7px 0 8px; font-size:1.35rem; }
+    .platform p:last-child { margin:0; color:var(--muted); font-size:.92rem; }
+    .badge { display:inline-block; padding:3px 8px; border-radius:999px; background:#dbeafe; color:#1d4ed8; font-size:.76rem; font-weight:700; }
+    .note { margin:0 0 44px; padding:14px 16px; border-left:3px solid var(--blue); background:var(--soft); color:var(--muted); font-size:.94rem; }
+    .section { margin-top:46px; }
+    .section-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    .section h2 { margin:0; font-size:1.55rem; }
+    .section p { margin:0; color:var(--muted); }
+    .demo-open { color:var(--blue); font-size:.92rem; font-weight:700; text-decoration:none; }
+    .frame { overflow:hidden; border:1px solid var(--line); border-radius:18px; background:#f8fafc; box-shadow:0 14px 34px rgba(15,23,42,.08); }
+    iframe { display:block; width:100%; height:880px; border:0; background:#fff; }
+    footer { margin-top:48px; color:var(--muted); font-size:.88rem; }
+    @media (max-width:720px) { .wrap{padding:26px 16px 56px;} .platforms{grid-template-columns:1fr;} iframe{height:760px;} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="./index.html#about">← 返回个人主页</a>
+    <header>
+      <p class="eyebrow">PRODUCT PRACTICE · TENCENT PCG</p>
+      <h1>内容服务平台产品实践</h1>
+      <p class="intro">从通航、策云、罗盘三类平台理解内容服务的协同链路。我主要参与通航审核标注平台与罗盘考培平台的产品需求工作，覆盖需求设计、评审、上线交付与日常维护。</p>
+    </header>
+
+    <section class="platforms" aria-label="平台分工">
+      <article class="platform active">
+        <p class="label">PLATFORM 01</p>
+        <h2>通航 <span class="badge">直接参与</span></h2>
+        <p>审核标注作业平台，围绕任务、质量、查询与培训形成作业闭环。</p>
+      </article>
+      <article class="platform">
+        <p class="label">PLATFORM 02</p>
+        <h2>策云</h2>
+        <p>作业管理协同平台，作为整体业务链路中的协作视角呈现。</p>
+      </article>
+      <article class="platform active">
+        <p class="label">PLATFORM 03</p>
+        <h2>罗盘 <span class="badge">直接参与</span></h2>
+        <p>标注员考培与项目管理平台，承接考培体系和日常运营支撑。</p>
+      </article>
+    </section>
+    <p class="note">以下保留通航与罗盘的完整交互 Demo，用于展示平台能力、角色分工、功能地图与核心业务链路；策云作为协同平台在上方保留整体定位。</p>
+
+    <section class="section" id="tonghang-demo">
+      <div class="section-head">
+        <div>
+          <h2>通航 · 罗盘 · 策云作业台展示</h2>
+          <p>在统一演示中切换查看三个平台；保留通航的平台介绍、角色入口、能力地图与主作业链路。</p>
+        </div>
+        <a class="demo-open" href="./platform-demo-public.html" target="_blank" rel="noopener">在新窗口打开</a>
+      </div>
+      <div class="frame">
+        <iframe src="./platform-demo-public.html" title="通航与罗盘公开交互演示" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <footer>腾讯 PCG 内容服务平台产品实践</footer>
+  </main>
+</body>
+</html>
