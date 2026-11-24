@@ -75,9 +75,13 @@
     });
   }
 
-  // 首次加载：根据 URL hash 或默认第一个
+  // 首次加载：默认定位到 #about
   try {
-    setActive(location.hash || (tocLinks[0] ? tocLinks[0].getAttribute('href') : ''));
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    var targetHash = (!location.hash || location.hash === '#portfolio') ? '#about' : location.hash;
+    setActive(targetHash || (tocLinks[0] ? tocLinks[0].getAttribute('href') : ''));
   } catch (e) {}
 
   // 滚动时：用 IntersectionObserver 自动切换当前板块
