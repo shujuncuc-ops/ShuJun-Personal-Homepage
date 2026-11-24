@@ -21,4 +21,5 @@
 - `project-coze-agent.html`：Coze 项目详情页
 - `project-navi-badges.html`：NAVI 项目详情页
 - `project-seed-eval.html`：Seed 项目详情页
+- `project-tencent-platforms.html`：Tecent 项目详情页
 - `publication-motivation-recognition.html`：科研详情页

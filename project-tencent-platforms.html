@@ -78,5 +78,27 @@
 
     <footer>腾讯 PCG 内容服务平台产品实践</footer>
   </main>
+<script>
+(function () {
+  var backLinks = document.querySelectorAll('a.back-link, a.back');
+  backLinks.forEach(function (link) {
+    link.removeAttribute('target');
+    link.setAttribute('href', './index.html#portfolio');
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.history.length > 1 && document.referrer) {
+        try {
+          var refUrl = new URL(document.referrer);
+          if (refUrl.origin === window.location.origin) {
+            window.history.back();
+            return;
+          }
+        } catch (err) {}
+      }
+      window.location.href = './index.html#portfolio';
+    });
+  });
+})();
+</script>
 </body>
 </html>
